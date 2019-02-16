@@ -11,7 +11,9 @@ def index():
     print(jsondata['title'])
     print(len(jsondata['images']))
     test='rabbit is running on the grass'
-    return test
+    return {
+        'Message' : test
+    }
 
 
 
