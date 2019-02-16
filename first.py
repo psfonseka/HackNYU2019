@@ -10,7 +10,8 @@ def index():
     jsondata = request.get_json()
     print(jsondata['title'])
     print(len(jsondata['images']))
-    return "hi"
+    test='rabbit is running on the grass'
+    return test
 
 
 
