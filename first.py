@@ -6,8 +6,10 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def index():
     # return "Hello, World!"
-    print(request.get_json())
+   # print(request.get_json())
     jsondata = request.get_json()
+    print(jsondata['title'])
+    print(len(jsondata['images']))
     return "hi"
 
 
