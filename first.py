@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 
 
 app = Flask(__name__)
@@ -11,9 +11,7 @@ def index():
     print(jsondata['title'])
     print(len(jsondata['images']))
     test='rabbit is running on the grass'
-    return {
-        'Message' : test
-    }
+    return jsonify(test)
 
 
 
