@@ -8,7 +8,6 @@ def index():
     # return "Hello, World!"
     print(request.get_json())
     jsondata = request.get_json()
-    print(jsondata['test1'])
     return "hi"
 
 
