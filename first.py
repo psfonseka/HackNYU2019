@@ -18,7 +18,7 @@ def index():
     images = jsondata['images']
 
     for image in images:
-        f = open(str(uuid.uuid4())+".jpg", "w")
+        f = open(str(uuid4())+".jpg", "w")
         f.write(base64.decodestring(image))
 
     return jsonify(test)
