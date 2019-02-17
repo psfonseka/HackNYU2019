@@ -1,5 +1,6 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, 
 import base64
+from uuid import uuid4
 
 
 app = Flask(__name__)
@@ -14,9 +15,11 @@ def index():
     print(len(jsondata['images']))
     test='rabbit is running on the grass'
 
-    f = open("out.jpg", "w")
     images = jsondata['images']
-    f.write(base64.decodestring(images[0]))
+
+    for image in images:
+        f = open(str(uuid.uuid4())+".jpg", "w")
+        f.write(base64.decodestring(image))
 
     return jsonify(test)
 
